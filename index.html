@@ -49,11 +49,19 @@
           </div>
           <div class="phone">
             <label for="phone">Phone Number</label>
-            <input id="phone" name="phone" type="tel" placeholder="Phone Number" required />
+            <input id="phone" name="phone" type="tel" placeholder="Phone Number" patern="^\d+$" required />
           </div>
           <div class="password">
             <label for="password">Password</label>
-            <input id="password" name="password" type="password" placeholder="Password" required />
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Password"
+              pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*#?&]).{8,}$"
+              title="Password must contain at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special character."
+              required
+            />
           </div>
           <div class="password-confirm">
             <label for="password-confirm">Confirm Password</label>
@@ -62,8 +70,8 @@
               type="password"
               name="password-confirm"
               minlength="8"
-              pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*#?&]).{8,}$"
               placeholder="Confirm Password"
+              pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*#?&]).{8,}$"
               title="Password must contain at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special character."
               required
             />
